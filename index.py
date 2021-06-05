@@ -18,7 +18,7 @@ clear = lambda: os.system('cls')
 
 clear()
 
-print("Enemy Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
+print(enemy["name"] +  " Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
 
 def playerAction():
     action = input("1: " + playerActions[0] + " 2: " + playerActions[1] + "\n")
@@ -32,7 +32,7 @@ def playerAction():
     
     clear()
     
-    print("Enemy Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
+    print(enemy["name"] +  " Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
 
 def enemyAction():
     action = enemyActions[random.randrange(0, len(enemyActions))]
@@ -45,7 +45,7 @@ def enemyAction():
     elif (action == enemyActions[1]):
         enemy["health"] += 15
 
-    print("Enemy Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
+    print(enemy["name"] +  " Health: " + str(enemy["health"]) + "\nYour Health: " + str(player["health"]))
 
 while enemy["health"] > 0 and player["health"] > 0:
     playerAction()
