@@ -52,6 +52,7 @@ while enemy["health"] > 0 and player["health"] > 0:
     enemyAction()
 else:
     if (enemy["health"] <= 0):
+        clear()
         print("You win!")
     else:
         clear()
